@@ -239,11 +239,11 @@ const Solucoes = () => {
                 {/* DX Tech Logo/Seal */}
                 <div className="flex flex-col items-center">
                   <div className="w-40 h-40 rounded-full bg-gradient-to-br from-petrol-dark to-petrol flex items-center justify-center p-1 shadow-lg">
-                    <div className="w-full h-full rounded-full bg-background flex items-center justify-center p-4">
+                    <div className="w-full h-full rounded-full bg-petrol-dark flex items-center justify-center p-5">
                       <img 
                         src={dxTechLogo}
                         alt="DX Tech Solutions"
-                        className="w-full h-auto object-contain filter brightness-0 invert"
+                        className="w-full h-auto object-contain"
                       />
                     </div>
                   </div>
