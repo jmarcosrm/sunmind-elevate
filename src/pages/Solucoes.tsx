@@ -3,6 +3,7 @@ import { Zap, Bot, BarChart3, CheckCircle, ChevronDown, Settings, Plug, Trending
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SolucoesHeroBackground from '@/components/SolucoesHeroBackground';
 import solarInstallation from '@/assets/solar-installation.jpg';
 
 const Solucoes = () => {
@@ -87,10 +88,11 @@ const Solucoes = () => {
       <Navbar />
       
       {/* Hero */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-petrol-dark via-petrol to-petrol-dark text-primary-foreground">
-        <div className="container mx-auto px-4 lg:px-8">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <SolucoesHeroBackground />
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-24">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
               Soluções de <span className="text-accent">IA</span> para Energia Solar
             </h1>
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
