@@ -1,10 +1,19 @@
 import { useState } from 'react';
-import { Zap, Bot, BarChart3, CheckCircle, ChevronDown, Settings, Plug, TrendingUp, Clock, Users, Shield } from 'lucide-react';
+import { Zap, Bot, BarChart3, CheckCircle, ChevronDown, Settings, Plug, Users, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SolucoesHeroBackground from '@/components/SolucoesHeroBackground';
 import solarInstallation from '@/assets/solar-installation.jpg';
+import dashboardRevenue from '@/assets/dashboard-revenue.jpg';
+import dashboardOps from '@/assets/dashboard-ops.jpg';
+import dashboardControl from '@/assets/dashboard-control.jpg';
+
+const dashboardImages: Record<string, string> = {
+  'revenue-engine': dashboardRevenue,
+  'custom-ops': dashboardOps,
+  'control-room': dashboardControl,
+};
 
 const Solucoes = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -156,24 +165,13 @@ const Solucoes = () => {
               </div>
 
               <div className={`relative ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
-                  <div className="grid grid-cols-2 gap-6">
-                    {[
-                      { icon: TrendingUp, label: 'Crescimento', value: '+127%' },
-                      { icon: Clock, label: 'Tempo Resp.', value: '< 5s' },
-                      { icon: Users, label: 'Leads/mês', value: '2.4k' },
-                      { icon: Shield, label: 'Uptime', value: '99.9%' },
-                    ].map((stat) => (
-                      <div key={stat.label} className="text-center p-4 bg-secondary rounded-xl">
-                        <stat.icon className="w-6 h-6 text-accent mx-auto mb-2" />
-                        <p className="text-2xl font-bold text-foreground">{stat.value}</p>
-                        <p className="text-xs text-muted-foreground">{stat.label}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 h-32 bg-gradient-to-r from-accent/20 to-solar-yellow-light/20 rounded-xl flex items-center justify-center">
-                    <span className="text-muted-foreground text-sm">Dashboard Preview</span>
-                  </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
+                  <img 
+                    src={dashboardImages[solution.id]}
+                    alt={`Dashboard ${solution.title}`}
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-petrol-dark/60 via-transparent to-transparent" />
                 </div>
               </div>
             </div>
