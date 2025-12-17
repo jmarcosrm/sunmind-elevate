@@ -124,11 +124,11 @@ const Solucoes = () => {
             <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <solution.icon className="w-7 h-7 text-accent" />
+                  <div className="w-14 h-14 rounded-xl bg-petrol/10 flex items-center justify-center">
+                    <solution.icon className="w-7 h-7 text-petrol" />
                   </div>
                   <div>
-                    <span className="text-accent text-sm font-semibold">{solution.roi}</span>
+                    <span className="text-petrol text-sm font-semibold">{solution.roi}</span>
                     <h2 className="text-3xl font-bold text-foreground">{solution.title}</h2>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const Solucoes = () => {
                 <div className="space-y-4 mb-8">
                   {solution.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-petrol shrink-0 mt-0.5" />
                       <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
@@ -152,7 +152,7 @@ const Solucoes = () => {
                     {solution.integrations.map((integration) => (
                       <span 
                         key={integration}
-                        className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full"
+                        className="px-3 py-1 bg-petrol/10 text-petrol text-sm rounded-full"
                       >
                         {integration}
                       </span>
@@ -202,7 +202,7 @@ const Solucoes = () => {
                   { icon: Shield, label: '100% seguro' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3 bg-petrol p-4 rounded-xl">
-                    <item.icon className="w-5 h-5 text-accent" />
+                    <item.icon className="w-5 h-5 text-white/80" />
                     <span className="text-sm">{item.label}</span>
                   </div>
                 ))}
@@ -223,9 +223,9 @@ const Solucoes = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase">Parceria Estratégica</span>
+            <span className="text-petrol font-semibold text-sm tracking-wider uppercase">Parceria Estratégica</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-              Tecnologia de <span className="text-gradient">Ponta</span>
+              Tecnologia de <span className="text-petrol">Ponta</span>
             </h2>
           </div>
           
@@ -257,7 +257,7 @@ const Solucoes = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-4">
                     <h3 className="text-2xl font-bold text-foreground">Parceria DX Tech Solutions</h3>
-                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full">
+                    <span className="px-3 py-1 bg-petrol/10 text-petrol text-xs font-semibold rounded-full">
                       Tecnologia
                     </span>
                   </div>
@@ -272,15 +272,15 @@ const Solucoes = () => {
 
                   <div className="grid sm:grid-cols-3 gap-4 mb-6">
                     <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-accent">24/7</p>
+                      <p className="text-2xl font-bold text-petrol">24/7</p>
                       <p className="text-xs text-muted-foreground">Operação Contínua</p>
                     </div>
                     <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-accent">+50</p>
+                      <p className="text-2xl font-bold text-petrol">+50</p>
                       <p className="text-xs text-muted-foreground">Integrações</p>
                     </div>
                     <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-accent">99.9%</p>
+                      <p className="text-2xl font-bold text-petrol">99.9%</p>
                       <p className="text-xs text-muted-foreground">Uptime Garantido</p>
                     </div>
                   </div>
@@ -289,7 +289,7 @@ const Solucoes = () => {
                     href="https://www.dxtechsolutions.com.br/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-semibold transition-colors"
+                    className="inline-flex items-center gap-2 text-petrol hover:text-petrol-light font-semibold transition-colors"
                   >
                     Conheça a DX Tech
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -309,7 +309,7 @@ const Solucoes = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Perguntas <span className="text-gradient">Frequentes</span>
+                Perguntas <span className="text-petrol">Frequentes</span>
               </h2>
               <p className="text-muted-foreground">
                 Tudo o que você precisa saber sobre nossas soluções de IA
@@ -328,7 +328,7 @@ const Solucoes = () => {
                   >
                     <span className="font-semibold text-foreground pr-4">{faq.question}</span>
                     <ChevronDown 
-                      className={`w-5 h-5 text-accent shrink-0 transition-transform ${
+                      className={`w-5 h-5 text-petrol shrink-0 transition-transform ${
                         openFaq === index ? 'rotate-180' : ''
                       }`}
                     />
