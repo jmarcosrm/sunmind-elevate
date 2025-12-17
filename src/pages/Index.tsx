@@ -6,69 +6,48 @@ import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
 import AnimatedHeroBackground from '@/components/AnimatedHeroBackground';
 import solarInstallation from '@/assets/solar-installation.jpg';
-
 const Index = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  const products = [
-    {
-      icon: Zap,
-      title: 'Revenue Engine Solar',
-      description: 'Resposta automática a leads em menos de 5 segundos. Aumente sua conversão com IA que qualifica e engaja prospects 24/7.',
-      highlight: '+30% conversão',
-    },
-    {
-      icon: Bot,
-      title: 'Custom Ops',
-      description: 'Agentes de IA que automatizam processos administrativos, desde follow-ups até geração de propostas personalizadas.',
-      highlight: '-60% tempo operacional',
-    },
-    {
-      icon: BarChart3,
-      title: 'Control Room',
-      description: 'Dashboards em tempo real com previsões de receita e insights acionáveis para escalar seu negócio solar.',
-      highlight: 'Previsibilidade total',
-    },
-  ];
-
-  const benefits = [
-    'Previsibilidade de receita com IA preditiva',
-    '≥30% de aumento na taxa de conversão',
-    'Integração plug-and-play com seu CRM',
-    'Suporte dedicado e onboarding em 48h',
-    'ROI garantido em até 90 dias',
-  ];
-
-  const testimonials = [
-    {
-      quote: 'A SunMind transformou completamente nossa operação. Em 3 meses, aumentamos nossa conversão em 42% e reduzimos o tempo de resposta para menos de 1 minuto.',
-      author: 'Carlos Silva',
-      role: 'CEO, SolarTech Goiás',
-      metric: '+42% conversão',
-    },
-    {
-      quote: 'A automação dos processos administrativos nos permitiu focar no que realmente importa: fechar novos contratos. Hoje processamos 3x mais leads.',
-      author: 'Ana Martins',
-      role: 'Diretora Comercial, EcoSol Brasil',
-      metric: '3x mais leads',
-    },
-    {
-      quote: 'O Control Room nos dá uma visão clara do futuro. Conseguimos prever nossa receita com 95% de precisão e planejar expansões com confiança.',
-      author: 'Roberto Mendes',
-      role: 'Fundador, Energia Limpa GO',
-      metric: '95% precisão',
-    },
-  ];
-
+  const products = [{
+    icon: Zap,
+    title: 'Revenue Engine Solar',
+    description: 'Resposta automática a leads em menos de 5 segundos. Aumente sua conversão com IA que qualifica e engaja prospects 24/7.',
+    highlight: '+30% conversão'
+  }, {
+    icon: Bot,
+    title: 'Custom Ops',
+    description: 'Agentes de IA que automatizam processos administrativos, desde follow-ups até geração de propostas personalizadas.',
+    highlight: '-60% tempo operacional'
+  }, {
+    icon: BarChart3,
+    title: 'Control Room',
+    description: 'Dashboards em tempo real com previsões de receita e insights acionáveis para escalar seu negócio solar.',
+    highlight: 'Previsibilidade total'
+  }];
+  const benefits = ['Previsibilidade de receita com IA preditiva', '≥30% de aumento na taxa de conversão', 'Integração plug-and-play com seu CRM', 'Suporte dedicado e onboarding em 48h', 'ROI garantido em até 90 dias'];
+  const testimonials = [{
+    quote: 'A SunMind transformou completamente nossa operação. Em 3 meses, aumentamos nossa conversão em 42% e reduzimos o tempo de resposta para menos de 1 minuto.',
+    author: 'Carlos Silva',
+    role: 'CEO, SolarTech Goiás',
+    metric: '+42% conversão'
+  }, {
+    quote: 'A automação dos processos administrativos nos permitiu focar no que realmente importa: fechar novos contratos. Hoje processamos 3x mais leads.',
+    author: 'Ana Martins',
+    role: 'Diretora Comercial, EcoSol Brasil',
+    metric: '3x mais leads'
+  }, {
+    quote: 'O Control Room nos dá uma visão clara do futuro. Conseguimos prever nossa receita com 95% de precisão e planejar expansões com confiança.',
+    author: 'Roberto Mendes',
+    role: 'Fundador, Energia Limpa GO',
+    metric: '95% precisão'
+  }];
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+      setActiveTestimonial(prev => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [testimonials.length]);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -78,35 +57,30 @@ const Index = () => {
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div 
-              className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-8 animate-fade-in"
-            >
+            <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-4 py-2 mb-8 animate-fade-in">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
               <span className="text-accent text-sm font-medium">IA especializada para o setor solar</span>
             </div>
             
-            <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up opacity-0 delay-100"
-              style={{ animationFillMode: 'forwards' }}
-            >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up opacity-0 delay-100" style={{
+            animationFillMode: 'forwards'
+          }}>
               Inteligência que{' '}
               <span className="text-gradient">ilumina</span> e{' '}
               <span className="text-gradient">escala</span>{' '}
               seu negócio solar
             </h1>
             
-            <p 
-              className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up opacity-0 delay-200"
-              style={{ animationFillMode: 'forwards' }}
-            >
+            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up opacity-0 delay-200" style={{
+            animationFillMode: 'forwards'
+          }}>
               Transforme leads em clientes com resposta em até 5 segundos. 
               Nossa IA automatiza sua operação comercial e multiplica suas conversões.
             </p>
             
-            <div 
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up opacity-0 delay-300"
-              style={{ animationFillMode: 'forwards' }}
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up opacity-0 delay-300" style={{
+            animationFillMode: 'forwards'
+          }}>
               <Button variant="hero" size="lg">
                 Solicite uma Demonstração
                 <ArrowRight className="ml-2" size={20} />
@@ -120,9 +94,7 @@ const Index = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-accent rounded-full animate-pulse" />
-          </div>
+          
         </div>
       </section>
 
@@ -139,11 +111,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.map((product, index) => (
-              <div
-                key={product.title}
-                className="group relative bg-card rounded-2xl p-8 border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-lg hover:-translate-y-2"
-              >
+            {products.map((product, index) => <div key={product.title} className="group relative bg-card rounded-2xl p-8 border border-border hover:border-accent/50 transition-all duration-500 hover:shadow-lg hover:-translate-y-2">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-solar-yellow-light rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
@@ -162,14 +130,10 @@ const Index = () => {
                   {product.description}
                 </p>
                 
-                <Link 
-                  to="/solucoes" 
-                  className="inline-flex items-center gap-2 text-accent font-semibold mt-6 opacity-0 group-hover:opacity-100 transition-opacity"
-                >
+                <Link to="/solucoes" className="inline-flex items-center gap-2 text-accent font-semibold mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
                   Saiba mais <ArrowRight size={16} />
                 </Link>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -190,15 +154,10 @@ const Index = () => {
               </p>
               
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li 
-                    key={index}
-                    className="flex items-start gap-3"
-                  >
+                {benefits.map((benefit, index) => <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
                     <span className="text-foreground">{benefit}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
               
               <Button variant="solar" size="lg" className="mt-8">
@@ -208,11 +167,7 @@ const Index = () => {
             
             <div className="relative">
               <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-3xl" />
-              <img 
-                src={solarInstallation}
-                alt="Instalação de painéis solares"
-                className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
-              />
+              <img src={solarInstallation} alt="Instalação de painéis solares" className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" />
             </div>
           </div>
         </div>
@@ -254,29 +209,15 @@ const Index = () => {
 
             {/* Navigation */}
             <div className="flex justify-center items-center gap-4 mt-8">
-              <button
-                onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-                className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors"
-              >
+              <button onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)} className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors">
                 <ChevronLeft size={20} />
               </button>
               
               <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveTestimonial(index)}
-                    className={`w-2 h-2 rounded-full transition-all ${
-                      index === activeTestimonial ? 'w-8 bg-accent' : 'bg-primary-foreground/30'
-                    }`}
-                  />
-                ))}
+                {testimonials.map((_, index) => <button key={index} onClick={() => setActiveTestimonial(index)} className={`w-2 h-2 rounded-full transition-all ${index === activeTestimonial ? 'w-8 bg-accent' : 'bg-primary-foreground/30'}`} />)}
               </div>
               
-              <button
-                onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)}
-                className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors"
-              >
+              <button onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonials.length)} className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors">
                 <ChevronRight size={20} />
               </button>
             </div>
@@ -304,8 +245,6 @@ const Index = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
