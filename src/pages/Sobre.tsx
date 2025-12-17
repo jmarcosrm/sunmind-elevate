@@ -80,7 +80,7 @@ const Sobre = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Nossa <span className="text-gradient">História</span>
+                Nossa <span className="text-petrol">História</span>
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 A SunMind Tech nasceu em 2021, em Goiânia, da visão de que a inteligência 
@@ -98,8 +98,8 @@ const Sobre = () => {
               <div className="space-y-4">
                 {timeline.map((item, index) => (
                   <div key={index} className="flex items-center gap-4">
-                    <span className="text-accent font-bold text-lg min-w-[60px]">{item.year}</span>
-                    <div className="w-3 h-3 bg-accent rounded-full" />
+                    <span className="text-petrol font-bold text-lg min-w-[60px]">{item.year}</span>
+                    <div className="w-3 h-3 bg-petrol rounded-full" />
                     <span className="text-foreground">{item.event}</span>
                   </div>
                 ))}
@@ -107,7 +107,7 @@ const Sobre = () => {
             </div>
             
             <div className="relative">
-              <div className="absolute -inset-4 bg-accent/20 rounded-3xl blur-3xl" />
+              <div className="absolute -inset-4 bg-petrol/10 rounded-3xl blur-3xl" />
               <img 
                 src={solarInstallation}
                 alt="Instalação solar"
@@ -125,10 +125,10 @@ const Sobre = () => {
             {values.map((item) => (
               <div 
                 key={item.title}
-                className="bg-card p-8 rounded-2xl border border-border hover:border-accent/50 transition-all hover:shadow-lg"
+                className="bg-card p-8 rounded-2xl border border-border hover:border-petrol/50 transition-all hover:shadow-lg"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-                  <item.icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 rounded-xl bg-petrol/10 flex items-center justify-center mb-6">
+                  <item.icon className="w-7 h-7 text-petrol" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-4">{item.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{item.description}</p>
@@ -144,7 +144,7 @@ const Sobre = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-[300px_1fr] gap-12 items-center">
               <div className="relative">
-                <div className="absolute -inset-4 bg-accent/20 rounded-full blur-2xl" />
+                <div className="absolute -inset-4 bg-petrol/10 rounded-full blur-2xl" />
                 <img 
                   src={ceoImage}
                   alt="José Marcos - CEO SunMind Tech"
@@ -153,7 +153,7 @@ const Sobre = () => {
               </div>
               
               <div>
-                <span className="text-accent font-semibold">Fundador & CEO</span>
+                <span className="text-petrol font-semibold">Fundador & CEO</span>
                 <h2 className="text-3xl font-bold text-foreground mt-2 mb-4">José Marcos</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Com mais de 15 anos de experiência em tecnologia e energia renovável, 
@@ -169,13 +169,13 @@ const Sobre = () => {
                 <div className="flex gap-4">
                   <a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors text-accent"
+                    className="w-10 h-10 rounded-full bg-petrol/10 flex items-center justify-center hover:bg-petrol hover:text-white transition-colors text-petrol"
                   >
                     <Linkedin size={18} />
                   </a>
                   <a 
                     href="#" 
-                    className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center hover:bg-accent hover:text-petrol-dark transition-colors text-accent"
+                    className="w-10 h-10 rounded-full bg-petrol/10 flex items-center justify-center hover:bg-petrol hover:text-white transition-colors text-petrol"
                   >
                     <Instagram size={18} />
                   </a>
@@ -193,7 +193,7 @@ const Sobre = () => {
             {/* Contact Info */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Entre em <span className="text-accent">Contato</span>
+                Entre em <span className="text-white">Contato</span>
               </h2>
               <p className="text-primary-foreground/80 mb-10 leading-relaxed">
                 Estamos prontos para ajudar seu negócio solar a crescer. 
@@ -202,8 +202,8 @@ const Sobre = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-white/80" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Localização</h4>
@@ -212,8 +212,8 @@ const Sobre = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-white/80" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
@@ -222,8 +222,8 @@ const Sobre = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                    <Phone className="w-5 h-5 text-white/80" />
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Telefone</h4>
@@ -235,7 +235,7 @@ const Sobre = () => {
               {/* Map placeholder */}
               <div className="mt-10 h-48 bg-petrol rounded-2xl flex items-center justify-center border border-primary-foreground/10">
                 <div className="text-center">
-                  <MapPin className="w-8 h-8 text-accent mx-auto mb-2" />
+                  <MapPin className="w-8 h-8 text-white/50 mx-auto mb-2" />
                   <p className="text-primary-foreground/50 text-sm">Goiânia, GO</p>
                 </div>
               </div>
