@@ -8,6 +8,7 @@ import solarInstallation from '@/assets/solar-installation.jpg';
 import dashboardRevenue from '@/assets/dashboard-revenue.jpg';
 import dashboardOps from '@/assets/dashboard-ops.jpg';
 import dashboardControl from '@/assets/dashboard-control.jpg';
+import dxTechLogo from '@/assets/dx-tech-logo.png';
 
 const dashboardImages: Record<string, string> = {
   'revenue-engine': dashboardRevenue,
@@ -213,6 +214,90 @@ const Solucoes = () => {
                 alt="Instalação solar"
                 className="rounded-2xl shadow-xl"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership Section */}
+      <section className="py-24 bg-secondary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase">Parceria Estratégica</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+              Tecnologia de <span className="text-gradient">Ponta</span>
+            </h2>
+          </div>
+          
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-xl relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-petrol/20 rounded-full blur-3xl" />
+              
+              <div className="relative z-10 grid md:grid-cols-[200px_1fr] gap-8 md:gap-12 items-center">
+                {/* DX Tech Logo/Seal */}
+                <div className="flex flex-col items-center">
+                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-petrol-dark to-petrol flex items-center justify-center p-1 shadow-lg">
+                    <div className="w-full h-full rounded-full bg-background flex items-center justify-center p-4">
+                      <img 
+                        src={dxTechLogo}
+                        alt="DX Tech Solutions"
+                        className="w-full h-auto object-contain filter brightness-0 invert"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-xs text-muted-foreground font-medium">Parceiro Oficial</span>
+                  </div>
+                </div>
+
+                {/* Partnership Content */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <h3 className="text-2xl font-bold text-foreground">Parceria DX Tech Solutions</h3>
+                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full">
+                      Tecnologia
+                    </span>
+                  </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    A SunMind Tech tem parceria estratégica com a <strong className="text-foreground">DX Tech Solutions</strong>, 
+                    referência em arquitetura de sistemas enxutos e automação inteligente. Essa colaboração 
+                    nos permite entregar soluções de IA ainda mais robustas, com infraestrutura de 
+                    <strong className="text-foreground"> máquinas de vendas 24/7</strong> e 
+                    <strong className="text-foreground"> agentes de IA</strong> que eliminam trabalho manual.
+                  </p>
+
+                  <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                    <div className="bg-secondary rounded-xl p-4 text-center">
+                      <p className="text-2xl font-bold text-accent">24/7</p>
+                      <p className="text-xs text-muted-foreground">Operação Contínua</p>
+                    </div>
+                    <div className="bg-secondary rounded-xl p-4 text-center">
+                      <p className="text-2xl font-bold text-accent">+50</p>
+                      <p className="text-xs text-muted-foreground">Integrações</p>
+                    </div>
+                    <div className="bg-secondary rounded-xl p-4 text-center">
+                      <p className="text-2xl font-bold text-accent">99.9%</p>
+                      <p className="text-xs text-muted-foreground">Uptime Garantido</p>
+                    </div>
+                  </div>
+
+                  <a 
+                    href="https://www.dxtechsolutions.com.br/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-semibold transition-colors"
+                  >
+                    Conheça a DX Tech
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
