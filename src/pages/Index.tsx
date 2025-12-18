@@ -51,36 +51,35 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-petrol-dark">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
         <AnimatedHeroBackground />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-petrol-dark/50" />
-        
+
         <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8 animate-fade-in">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <span className="text-white/80 text-sm font-medium">IA especializada para o setor solar</span>
+            <div className="inline-flex items-center gap-2 bg-secondary border border-border rounded-full px-4 py-2 mb-8 animate-fade-in">
+              <span className="w-2 h-2 bg-foreground/80 rounded-full animate-pulse" />
+              <span className="text-muted-foreground text-sm font-medium">IA especializada para o setor solar</span>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight animate-fade-in-up opacity-0 delay-100" style={{
-            animationFillMode: 'forwards'
-          }}>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight animate-fade-in-up opacity-0 delay-100" style={{
+              animationFillMode: 'forwards'
+            }}>
               Inteligência que{' '}
               <span className="text-gradient">ilumina</span> e{' '}
               <span className="text-gradient">escala</span>{' '}
               seu negócio solar
             </h1>
-            
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up opacity-0 delay-200" style={{
-            animationFillMode: 'forwards'
-          }}>
-              Transforme leads em clientes com resposta em até 5 segundos. 
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up opacity-0 delay-200" style={{
+              animationFillMode: 'forwards'
+            }}>
+              Transforme leads em clientes com resposta em até 5 segundos.
               Nossa IA automatiza sua operação comercial e multiplica suas conversões.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up opacity-0 delay-300" style={{
-            animationFillMode: 'forwards'
-          }}>
+              animationFillMode: 'forwards'
+            }}>
               <Button variant="hero" size="lg">
                 Solicite uma Demonstração
                 <ArrowRight className="ml-2" size={20} />
@@ -94,7 +93,7 @@ const Index = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          
+
         </div>
       </section>
 
@@ -111,28 +110,30 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.map((product, index) => <div key={product.title} className="group relative bg-card rounded-2xl p-8 border border-border hover:border-petrol-light/50 transition-all duration-500 hover:shadow-lg hover:-translate-y-2">
-                
-                <div className="w-14 h-14 rounded-xl bg-petrol/10 flex items-center justify-center mb-6 group-hover:bg-petrol/20 transition-colors">
-                  <product.icon className="w-7 h-7 text-petrol" />
+            {products.map((product, index) => (
+              <div key={product.title} className="group relative bg-card rounded-2xl p-8 border border-border hover:border-accent-light/50 transition-all duration-500 hover:shadow-lg hover:-translate-y-2">
+
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                  <product.icon className="w-7 h-7 text-accent" />
                 </div>
-                
-                <span className="inline-block text-xs font-semibold text-petrol bg-petrol/10 px-3 py-1 rounded-full mb-4">
+
+                <span className="inline-block text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full mb-4">
                   {product.highlight}
                 </span>
-                
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-petrol transition-colors">
+
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
                   {product.title}
                 </h3>
-                
+
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {product.description}
                 </p>
-                
-                <Link to="/solucoes" className="inline-flex items-center gap-2 text-petrol font-semibold mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
+
+                <Link to="/solucoes" className="inline-flex items-center gap-2 text-accent font-semibold mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
                   Saiba mais <ArrowRight size={16} />
                 </Link>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -147,25 +148,27 @@ const Index = () => {
                 <span className="text-gradient">SunMind Tech?</span>
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Somos especialistas em inteligência artificial para o setor solar. 
-                Nossa tecnologia foi desenvolvida por quem entende as dores e oportunidades 
+                Somos especialistas em inteligência artificial para o setor solar.
+                Nossa tecnologia foi desenvolvida por quem entende as dores e oportunidades
                 do mercado de energia renovável.
               </p>
-              
+
               <ul className="space-y-4">
-                {benefits.map((benefit, index) => <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-petrol shrink-0 mt-0.5" />
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
                     <span className="text-foreground">{benefit}</span>
-                  </li>)}
+                  </li>
+                ))}
               </ul>
-              
+
               <Button variant="solar" size="lg" className="mt-8">
                 Agende uma Conversa
               </Button>
             </div>
-            
+
             <div className="relative">
-              <div className="absolute -inset-4 bg-petrol/10 rounded-3xl blur-3xl" />
+              <div className="absolute -inset-4 bg-accent/10 rounded-3xl blur-3xl" />
               <img src={solarInstallation} alt="Instalação de painéis solares" className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]" />
             </div>
           </div>
@@ -173,24 +176,24 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-petrol-dark text-primary-foreground">
+      <section className="py-24 bg-background text-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Resultados que <span className="text-white">Falam</span>
+              Resultados que <span className="text-gradient">Falam</span>
             </h2>
-            <p className="text-primary-foreground/70 max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto">
               Veja como integradores solares estão transformando seus negócios com a SunMind Tech
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto relative">
-            <div className="bg-petrol rounded-2xl p-8 md:p-12 relative overflow-hidden">
+            <div className="bg-secondary rounded-2xl p-8 md:p-12 relative overflow-hidden">
               <Quote className="absolute top-6 left-6 w-12 h-12 text-white/10" />
               
               <div className="relative z-10">
                 <div className="flex justify-center mb-6">
-                  <span className="inline-block bg-white text-petrol-dark font-bold px-4 py-2 rounded-full text-lg">
+                  <span className="inline-block bg-accent text-background font-bold px-4 py-2 rounded-full text-lg">
                     {testimonials[activeTestimonial].metric}
                   </span>
                 </div>
@@ -201,22 +204,22 @@ const Index = () => {
                 
                 <div className="text-center">
                   <p className="font-semibold text-lg">{testimonials[activeTestimonial].author}</p>
-                  <p className="text-primary-foreground/60">{testimonials[activeTestimonial].role}</p>
+                  <p className="text-muted-foreground">{testimonials[activeTestimonial].role}</p>
                 </div>
               </div>
             </div>
 
             {/* Navigation */}
             <div className="flex justify-center items-center gap-4 mt-8">
-              <button onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)} className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-white/20 transition-colors">
+              <button onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)} className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent/20 transition-colors">
                 <ChevronLeft size={20} />
               </button>
               
               <div className="flex gap-2">
-                {testimonials.map((_, index) => <button key={index} onClick={() => setActiveTestimonial(index)} className={`w-2 h-2 rounded-full transition-all ${index === activeTestimonial ? 'w-8 bg-white' : 'bg-primary-foreground/30'}`} />)}
+                {testimonials.map((_, index) => <button key={index} onClick={() => setActiveTestimonial(index)} className={`w-2 h-2 rounded-full transition-all ${index === activeTestimonial ? 'w-8 bg-foreground' : 'bg-muted'}`} />)}
               </div>
               
-              <button onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonials.length)} className="w-10 h-10 rounded-full bg-petrol flex items-center justify-center hover:bg-white/20 transition-colors">
+              <button onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonials.length)} className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent/20 transition-colors">
                 <ChevronRight size={20} />
               </button>
             </div>

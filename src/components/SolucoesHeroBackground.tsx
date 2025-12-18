@@ -7,11 +7,6 @@ const SolucoesHeroBackground = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="solBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="hsl(193, 80%, 8%)" />
-          <stop offset="50%" stopColor="hsl(193, 70%, 14%)" />
-          <stop offset="100%" stopColor="hsl(193, 80%, 6%)" />
-        </linearGradient>
         
         <linearGradient id="solLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="hsl(38, 92%, 55%)" stopOpacity="0" />
@@ -39,7 +34,7 @@ const SolucoesHeroBackground = () => {
       </defs>
 
       {/* Background */}
-      <rect width="100%" height="100%" fill="url(#solBgGradient)" />
+      <rect width="100%" height="100%" className="hero-background-fill" />
 
       {/* Neural network nodes and connections */}
       <g filter="url(#solGlow)">

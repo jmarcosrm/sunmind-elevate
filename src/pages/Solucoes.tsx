@@ -102,10 +102,10 @@ const Solucoes = () => {
         <SolucoesHeroBackground />
         <div className="container mx-auto px-4 lg:px-8 relative z-10 pt-24">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Soluções de <span className="text-accent">IA</span> para Energia Solar
             </h1>
-            <p className="text-xl text-primary-foreground/80 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Três pilares tecnológicos projetados para transformar a forma como 
               integradores solares captam, convertem e gerenciam clientes.
             </p>
@@ -124,11 +124,11 @@ const Solucoes = () => {
             <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
               <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-xl bg-petrol/10 flex items-center justify-center">
-                    <solution.icon className="w-7 h-7 text-petrol" />
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <solution.icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <span className="text-petrol text-sm font-semibold">{solution.roi}</span>
+                    <span className="text-accent text-sm font-semibold">{solution.roi}</span>
                     <h2 className="text-3xl font-bold text-foreground">{solution.title}</h2>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ const Solucoes = () => {
                 <div className="space-y-4 mb-8">
                   {solution.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-petrol shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
@@ -152,7 +152,7 @@ const Solucoes = () => {
                     {solution.integrations.map((integration) => (
                       <span 
                         key={integration}
-                        className="px-3 py-1 bg-petrol/10 text-petrol text-sm rounded-full"
+                        className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full"
                       >
                         {integration}
                       </span>
@@ -172,7 +172,7 @@ const Solucoes = () => {
                     alt={`Dashboard ${solution.title}`}
                     className="w-full h-auto object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-petrol-dark/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ const Solucoes = () => {
       ))}
 
       {/* Integration Section */}
-      <section className="py-24 bg-petrol-dark text-primary-foreground">
+      <section className="py-24 bg-secondary text-foreground">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -189,7 +189,7 @@ const Solucoes = () => {
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Integração <span className="text-accent">Plug-and-Play</span>
               </h2>
-              <p className="text-primary-foreground/80 mb-8 leading-relaxed">
+              <p className="text-muted-foreground mb-8 leading-relaxed">
                 Nossa tecnologia foi desenhada para se conectar ao seu ecossistema atual 
                 sem fricção. Em menos de 48 horas, você estará operando com todo o poder 
                 da nossa IA.
@@ -201,9 +201,9 @@ const Solucoes = () => {
                   { icon: Users, label: 'Suporte dedicado' },
                   { icon: Shield, label: '100% seguro' },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center gap-3 bg-petrol p-4 rounded-xl">
-                    <item.icon className="w-5 h-5 text-white/80" />
-                    <span className="text-sm">{item.label}</span>
+                  <div key={item.label} className="flex items-center gap-3 bg-card p-4 rounded-xl">
+                    <item.icon className="w-5 h-5 text-accent" />
+                    <span className="text-sm text-foreground">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -219,89 +219,6 @@ const Solucoes = () => {
         </div>
       </section>
 
-      {/* Partnership Section */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-petrol font-semibold text-sm tracking-wider uppercase">Parceria Estratégica</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-              Tecnologia de <span className="text-petrol">Ponta</span>
-            </h2>
-          </div>
-          
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-card rounded-3xl p-8 md:p-12 border border-border shadow-xl relative overflow-hidden">
-              {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-petrol/20 rounded-full blur-3xl" />
-              
-              <div className="relative z-10 grid md:grid-cols-[200px_1fr] gap-8 md:gap-12 items-center">
-                {/* DX Tech Logo/Seal */}
-                <div className="flex flex-col items-center">
-                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-petrol-dark to-petrol flex items-center justify-center p-1 shadow-lg">
-                    <div className="w-full h-full rounded-full bg-petrol-dark flex items-center justify-center p-5">
-                      <img 
-                        src={dxTechLogo}
-                        alt="DX Tech Solutions"
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="mt-4 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-xs text-muted-foreground font-medium">Parceiro Oficial</span>
-                  </div>
-                </div>
-
-                {/* Partnership Content */}
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-2xl font-bold text-foreground">Parceria DX Tech Solutions</h3>
-                    <span className="px-3 py-1 bg-petrol/10 text-petrol text-xs font-semibold rounded-full">
-                      Tecnologia
-                    </span>
-                  </div>
-                  
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    A SunMind Tech tem parceria estratégica com a <strong className="text-foreground">DX Tech Solutions</strong>, 
-                    referência em arquitetura de sistemas enxutos e automação inteligente. Essa colaboração 
-                    nos permite entregar soluções de IA ainda mais robustas, com infraestrutura de 
-                    <strong className="text-foreground"> máquinas de vendas 24/7</strong> e 
-                    <strong className="text-foreground"> agentes de IA</strong> que eliminam trabalho manual.
-                  </p>
-
-                  <div className="grid sm:grid-cols-3 gap-4 mb-6">
-                    <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-petrol">24/7</p>
-                      <p className="text-xs text-muted-foreground">Operação Contínua</p>
-                    </div>
-                    <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-petrol">+50</p>
-                      <p className="text-xs text-muted-foreground">Integrações</p>
-                    </div>
-                    <div className="bg-secondary rounded-xl p-4 text-center">
-                      <p className="text-2xl font-bold text-petrol">99.9%</p>
-                      <p className="text-xs text-muted-foreground">Uptime Garantido</p>
-                    </div>
-                  </div>
-
-                  <a 
-                    href="https://www.dxtechsolutions.com.br/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-petrol hover:text-petrol-light font-semibold transition-colors"
-                  >
-                    Conheça a DX Tech
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-24 bg-background">
@@ -309,7 +226,7 @@ const Solucoes = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Perguntas <span className="text-petrol">Frequentes</span>
+                Perguntas <span className="text-accent">Frequentes</span>
               </h2>
               <p className="text-muted-foreground">
                 Tudo o que você precisa saber sobre nossas soluções de IA
@@ -328,7 +245,7 @@ const Solucoes = () => {
                   >
                     <span className="font-semibold text-foreground pr-4">{faq.question}</span>
                     <ChevronDown 
-                      className={`w-5 h-5 text-petrol shrink-0 transition-transform ${
+                      className={`w-5 h-5 text-accent shrink-0 transition-transform ${
                         openFaq === index ? 'rotate-180' : ''
                       }`}
                     />

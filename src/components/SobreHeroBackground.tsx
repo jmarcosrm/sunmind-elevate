@@ -7,11 +7,6 @@ const SobreHeroBackground = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <linearGradient id="sobreBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="hsl(193, 80%, 6%)" />
-          <stop offset="40%" stopColor="hsl(193, 70%, 12%)" />
-          <stop offset="100%" stopColor="hsl(193, 80%, 8%)" />
-        </linearGradient>
 
         <radialGradient id="sobreGlow" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="hsl(38, 92%, 55%)" stopOpacity="0.6" />
@@ -34,7 +29,7 @@ const SobreHeroBackground = () => {
       </defs>
 
       {/* Background */}
-      <rect width="100%" height="100%" fill="url(#sobreBgGradient)" />
+      <rect width="100%" height="100%" className="hero-background-fill" />
 
       {/* Large sun/energy source */}
       <g>

@@ -8,11 +8,6 @@ const AnimatedHeroBackground = () => {
     >
       <defs>
         {/* Gradients */}
-        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="hsl(193, 80%, 6%)" />
-          <stop offset="50%" stopColor="hsl(193, 70%, 12%)" />
-          <stop offset="100%" stopColor="hsl(193, 80%, 8%)" />
-        </linearGradient>
         
         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor="hsl(38, 92%, 55%)" stopOpacity="0" />
@@ -56,7 +51,7 @@ const AnimatedHeroBackground = () => {
       </defs>
 
       {/* Background */}
-      <rect width="100%" height="100%" fill="url(#bgGradient)" />
+      <rect width="100%" height="100%" className="hero-background-fill" />
 
       {/* Center light source */}
       <ellipse cx="960" cy="400" rx="300" ry="200" fill="url(#centerGlow)" opacity="0.4">

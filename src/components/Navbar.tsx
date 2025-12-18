@@ -37,34 +37,20 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10">
-              <div className="absolute inset-0 bg-accent rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
-              <div className="absolute inset-2 border-2 border-petrol-dark rounded-full" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-petrol-dark rounded-full" />
-              <div className="absolute top-1/2 right-1 w-3 h-0.5 bg-petrol-dark" />
-            </div>
-            <span
-              className={cn(
-                'text-xl font-bold transition-colors',
-                isScrolled || !isHomePage ? 'text-primary' : 'text-primary-foreground'
-              )}
-            >
-              SunMind<span className="text-accent">Tech</span>
-            </span>
-          </Link>
+          <div className="flex-1">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img src="https://i.im.ge/2025/12/18/BuGjQ6.sunmind-1.png" alt="SunMind Tech Logo" className="w-auto h-24" />
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex flex-1 justify-center items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
                 className={cn(
-                  'text-sm font-medium transition-colors relative group',
-                  isScrolled || !isHomePage
-                    ? 'text-foreground hover:text-accent'
-                    : 'text-primary-foreground/90 hover:text-primary-foreground',
+                  'text-sm font-medium transition-colors text-white/80 hover:text-white relative group',
                   location.pathname === link.path && 'text-accent'
                 )}
               >
@@ -77,23 +63,27 @@ const Navbar = () => {
                 />
               </Link>
             ))}
-            <Button variant={isScrolled || !isHomePage ? 'solar' : 'hero'} size="sm">
-              Solicite uma Demo
+          </div>
+
+          <div className="hidden md:flex flex-1 justify-end">
+            <Button variant={'solar'} size="sm">
+              Fale Conosco
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className={cn(
-              'md:hidden p-2 rounded-lg transition-colors',
-              isScrolled || !isHomePage
-                ? 'text-foreground hover:bg-muted'
-                : 'text-primary-foreground hover:bg-primary-foreground/10'
-            )}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden">
+            <Link
+              key="mobile-menu-button"
+              to="#"
+              className={cn(
+                'p-2 rounded-lg transition-colors text-white hover:bg-white/10'
+              )}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -117,9 +107,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button variant="solar" className="w-full">
-              Solicite uma Demo
-            </Button>
           </div>
         </div>
       </div>

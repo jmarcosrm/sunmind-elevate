@@ -6,47 +6,34 @@
 
 @layer base {
   :root {
-    /* Solar-inspired palette */
-    --background: 0 0% 100%;
-    --foreground: 200 50% 15%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 200 50% 15%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 200 50% 15%;
-
-    /* Deep petrol blue - primary */
-    --primary: 193 70% 18%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Secondary - light gray blue */
-    --secondary: 200 20% 96%;
-    --secondary-foreground: 193 70% 18%;
-
-    --muted: 200 15% 94%;
-    --muted-foreground: 200 20% 45%;
-
-    /* Solar yellow/amber accent */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 38 92% 55%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 63.9%;
     --accent: 38 92% 55%;
-    --accent-foreground: 200 50% 15%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 200 20% 90%;
-    --input: 200 20% 90%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
     --ring: 38 92% 55%;
-
     --radius: 0.75rem;
 
     /* Custom tokens */
     --solar-yellow: 38 92% 55%;
     --solar-yellow-light: 42 100% 70%;
     --solar-yellow-dark: 35 90% 45%;
-    --petrol-blue: 193 70% 18%;
-    --petrol-blue-light: 193 50% 35%;
-    --petrol-blue-dark: 193 80% 10%;
+    --petrol-blue: 0 0% 100%; /* Alterado para branco no modo escuro */
+    --petrol-blue-light: 0 0% 90%;
+    --petrol-blue-dark: 0 0% 100%;
     
     /* Gradients */
     --gradient-solar: linear-gradient(135deg, hsl(var(--solar-yellow)) 0%, hsl(var(--solar-yellow-light)) 100%);
@@ -54,49 +41,10 @@
     --gradient-card: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--secondary)) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px hsl(var(--petrol-blue) / 0.06);
-    --shadow-md: 0 4px 20px hsl(var(--petrol-blue) / 0.1);
-    --shadow-lg: 0 8px 40px hsl(var(--petrol-blue) / 0.12);
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.06);
+    --shadow-md: 0 4px 20px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 8px 40px hsl(0 0% 0% / 0.12);
     --shadow-glow: 0 0 40px hsl(var(--solar-yellow) / 0.3);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 193 80% 6%;
-    --foreground: 0 0% 98%;
-
-    --card: 193 70% 10%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 193 70% 10%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 38 92% 55%;
-    --primary-foreground: 200 50% 10%;
-
-    --secondary: 193 50% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 193 40% 18%;
-    --muted-foreground: 200 15% 65%;
-
-    --accent: 38 92% 55%;
-    --accent-foreground: 200 50% 10%;
-
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 193 40% 20%;
-    --input: 193 40% 20%;
-    --ring: 38 92% 55%;
   }
 }
 
@@ -116,6 +64,9 @@
 }
 
 @layer components {
+  .hero-background-fill {
+    fill: hsl(var(--background));
+  }
   .gradient-solar {
     background: var(--gradient-solar);
   }
